@@ -1,0 +1,344 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #6C809A;
+}
+.navbar {
+    background: #6C809A;
+    height: 100px;
+}
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.collegecalc-logo {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 10px;
+    margin-right: 15px;
+}
+.dropdown {
+    margin-right: 970px;
+    margin-bottom: 10px;
+}
+.dropdown button {
+    background-color: #6C809A;
+    border: none;
+}
+.dropdown-item {
+    color: white;
+}
+.navbuttons {
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+.button-style {
+    background: #6C809A;
+    border: none;
+    color: white;
+}
+
+body .container {
+    max-width: none;
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+    width: 960px;
+    padding: 30px;
+}
+.container-content {
+    background-color: white;
+}
+
+
+/* Final Exam Grade Calculator */
+.title {
+    font-size: 25px;
+}
+.gradeCalc {
+    background-color: white;
+    width: 780px;
+    height: 300px;
+    margin: 20px auto;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 2px;
+}
+.bio {
+    background-color: white;
+    padding: 10px;
+}
+.current-grade {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 130px;
+}
+.current-grade input {
+    height: 30px;
+}
+.current-grade p {
+    font-size: 19px;
+}
+.desired-grade {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 130px;
+}
+.desired-grade input {
+    height: 30px;
+}
+.desired-grade p {
+    font-size: 19px;
+    margin-left: 3px;
+}
+.grade-weight {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 130px;
+    margin-left: 20px;
+}
+.grade-weight input {
+    height: 30px;
+    margin-left: 7px;
+}
+.grade-weight p {
+    font-size: 19px;
+    margin-left: 0px 20px 0px 3px;
+}
+.calculate {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    padding: 0px 0px;
+    margin: 0 auto;
+    width: 100px;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+.how-title {
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+
+/* About page */
+.about-pfp {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 50%;
+    width: 300px;
+}
+
+
+/* Home page */
+.home-title {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 80px;
+    font-family: 'Raleway';
+}
+.home-title-bio {
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    font-family: 'Raleway';
+}
+.tuition-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.tuition-info p {
+    margin: 80px 30px 0px 40px;
+    text-align: center;
+    width: 600px;
+    font-family: 'Raleway';
+    animation: backInRight;
+    animation-duration: 1s;
+}
+.tuition-info canvas {
+    max-width: 600px;
+    max-height: 300px;
+    margin-top: 20px;   
+}
+
+
+/* GPA Calculator */
+.gpaCalc {
+    display: block;
+    width: 100%;
+}
+.gpaCalc-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.semester {
+    max-width: 450px;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: black;
+    border-width: 1px;
+    margin-bottom: 20px;
+}
+.semester h1 {
+    text-align: center;
+    color: white;
+    font-style: oblique;
+    background-color:#6C809A;
+    font-size: 25px;
+    height: 50px;
+    padding-top: 10px;
+}
+.course-names {
+    max-width: 150px;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.course-names input {
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border-color: black;
+}
+.title-inputs {
+    width: 150px;
+}
+.title-inputs p {
+    text-align: center;
+    font-weight: bold;
+    width: 150px;
+}
+.title-inputs input {
+    max-width: 150px; 
+}
+.credit-inputs {
+    max-width: 100px;
+}
+.credit-inputs p {
+    text-align: center;
+    font-weight: bold;
+    margin-left: 12px;
+}
+.credit-inputs input {
+    width: 80px;
+}
+.grade-dropdown {
+    width: 80px;
+}
+.grade-dropdown p {
+    font-weight: bold;
+    padding-left: 3px;
+}
+.grade-dropdown button {
+    background-color: white;
+    color: black;
+    display: block;
+    margin-bottom: 9px;
+    padding-left: 20px;
+    height: 29px;
+}
+.add-course {
+    border: none;
+    background-color: whitesmoke;
+    color: blue;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.add-semester {
+    margin-left: 165px;
+    background-color: white;
+    color: blue;
+    border: none;
+}
+.submit-semesters {
+    background-color: green;
+    color: white;
+    height: 30px;
+    width: 90px;
+    padding: 0px 5px 0px 5px;
+    border-color: green;
+    margin: 5px 0px 0px 135px;
+}
+.clear-page {
+    margin-left: 10px;
+    width: 70px;
+    color: black;
+}
+
+/* New Grade Calculator */
+.new-grade-title {
+    font-size: 25px;
+}
+
+.new-grade-calc {
+    background-color: white;
+    width: 780px;
+    height: 300px;
+    margin: 20px auto;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 2px;
+}
+.new-grade-bio {
+    background-color: white;
+    padding: 10px;
+}
+.new-current-grade {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 130px;
+}
+.new-current-grade input {
+    height: 30px;
+    margin-left: 20px;
+}
+.new-current-grade p {
+    font-size: 19px;
+}
+.new-grade {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 150px;
+}
+.new-grade input {
+    height: 30px;
+    margin-left: 32px;
+}
+.new-grade p {
+    font-size: 19px;
+}
+
+.new-grade-weight {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 130px;
+}
+.new-grade-weight input {
+    height: 30px;
+    margin-left: 7px;
+}
+.new-grade-weight p {
+    font-size: 19px;
+    margin-left: 0px 20px 0px 3px;
+}
+.new-how-title {
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.footer {
+    height: 150px;
+}
