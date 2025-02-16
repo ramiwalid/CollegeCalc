@@ -131,11 +131,65 @@ body .container {
 
 
 /* About page */
-.about-pfp {
-    display: flex;
-    justify-content: flex-end;
-    border-radius: 50%;
-    width: 300px;
+.about {
+    display: inline-flex;
+}
+.text p {
+    width: 670px; 
+}
+.text h2 {
+    font-weight: bold;
+    font-size: 27px;
+}
+.text a {
+    color: blue;
+    text-decoration: none;
+}
+.titles {
+    width: max-content;
+    animation: shakeX;
+    animation-duration: 2s;
+}
+.about img {
+    border-style: solid;
+    border-width: 3px;
+    width: 200px;
+    margin-left: 30px;
+    height: max-content;
+}
+.image-section {
+    width: 200px;
+    display: block;
+}
+.linkedin {
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+.linkedin a {
+    font-size: 20px;
+    color: blue;
+    font-family: 'Raleway';
+    text-decoration: none;
+}
+.linkedin i {
+    font-size: 23px;
+}
+.github {
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+.github a {
+    font-size: 20px;
+    color: blue;
+    font-family: 'Raleway';
+    text-decoration: none;
+}
+.github i {
+    font-size: 23px;
 }
 
 
