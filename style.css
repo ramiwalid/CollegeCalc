@@ -155,7 +155,7 @@ body .container {
     border-width: 3px;
     width: 200px;
     margin-left: 30px;
-    height: max-content;
+    max-height: max-content;
 }
 .image-section {
     width: 200px;
@@ -229,7 +229,7 @@ body .container {
 
 /* GPA Calculator */
 .gpaCalc {
-    display: block;
+    display: inline-block;
     width: 100%;
 }
 .gpaCalc-title {
@@ -253,6 +253,9 @@ body .container {
     font-size: 25px;
     height: 50px;
     padding-top: 10px;
+}
+.gpa-description {
+    max-width: 440px;
 }
 .course-names {
     max-width: 150px;
