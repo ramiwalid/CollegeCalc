@@ -224,6 +224,8 @@ body .container {
     max-width: 600px;
     max-height: 300px;
     margin-top: 20px;   
+    animation: backInUp;
+    animation-duration: 1s;
 }
 
 
