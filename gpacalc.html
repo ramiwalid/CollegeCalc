@@ -3,6 +3,9 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,149 +35,40 @@
         <div class="container">
             <div class="container-content">
                 <h2 class="gpaCalc-title">GPA Calculator</h2>
+                <p class="gpa-calc-bio"> 
+                    Enter the <span style="font-weight: bold;">course name</span> (optional), how many 
+                    <span style="font-weight: bold;">credits</span> the course is worth, and the 
+                    <span style="font-weight: bold;">grade</span> you received for every class in your 
+                    semester and click <span style="font-weight: bold;">submit</span>. Optionally, you 
+                    can use the <span style="font-weight: bold;">"Add Semester"</span> and 
+                    <span style="font-weight: bold;">"Add Course"</span> buttons to customize your semester(s). 
+                    Use the <span style="font-weight: bold;">"Reset"</span> button to revert to original settings.
+                </p>
                 <div class="gpaCalc">
-                    <div v-for="semesterCount">
-                        <div class="semester">
-                            <h1>Semester {{ semesterCount }} </h1>
-                            <div class="course-names">
-                                <ul class="title-inputs">
-                                    <p class="course-title">Course Title</p>
-                                    <input type="text">
-                                    <input type="text">
-                                    <input type="text">
-                                    <input type="text">
-                                    <input type="text" v-show="courseCount >= 1">
-                                    <input type="text" v-show="courseCount >= 2">
-                                    <input type="text" v-show="courseCount >= 3">
-                                    <input type="text" v-show="courseCount >= 4">
-                                    <input type="text" v-show="courseCount >= 5">
-                                    <input type="text" v-show="courseCount >= 6">
-                                </ul>
-                                <ul class="credit-inputs">
-                                    <p>Credits</p>
-                                    <input type="number">
-                                    <input type="number">
-                                    <input type="number">
-                                    <input type="number">
-                                    <input type="number" v-show="courseCount >= 1">
-                                    <input type="number" v-show="courseCount >= 2">
-                                    <input type="number" v-show="courseCount >= 3">
-                                    <input type="number" v-show="courseCount >= 4">
-                                    <input type="number" v-show="courseCount >= 5">
-                                    <input type="number" v-show="courseCount >= 6">
-                                </ul>
-                                <ul class="grade-dropdown">
-                                    <p>Grade</p>
-                                    <div class="btn-group dropend">
-                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            --
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">A</a></li>
-                                            <li><a class="dropdown-item" href="#">B</a></li>
-                                            <li><a class="dropdown-item" href="#">C</a></li>                                    
-                                        </ul>   
-                                    </div>   
-                                    <div class="btn-group dropend">
-                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            --
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">A</a></li>
-                                            <li><a class="dropdown-item" href="#">B</a></li>
-                                            <li><a class="dropdown-item" href="#">C</a></li>                                    
-                                        </ul>   
-                                    </div> 
-                                    <div class="btn-group dropend">
-                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            --
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">A</a></li>
-                                            <li><a class="dropdown-item" href="#">B</a></li>
-                                            <li><a class="dropdown-item" href="#">C</a></li>                                    
-                                        </ul>   
-                                    </div>   
-                                    <div class="btn-group dropend">
-                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            --
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">A</a></li>
-                                            <li><a class="dropdown-item" href="#">B</a></li>
-                                            <li><a class="dropdown-item" href="#">C</a></li>                                    
-                                        </ul>   
-                                    </div> 
-                                    <div class="btn-group dropend" v-show="courseCount >= 1">
-                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            --
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">A</a></li>
-                                            <li><a class="dropdown-item" href="#">B</a></li>
-                                            <li><a class="dropdown-item" href="#">C</a></li>                                    
-                                        </ul>   
-                                    </div>   
-                                    <div class="btn-group dropend" v-show="courseCount >= 2">
-                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            --
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">A</a></li>
-                                            <li><a class="dropdown-item" href="#">B</a></li>
-                                            <li><a class="dropdown-item" href="#">C</a></li>                                    
-                                        </ul>   
-                                    </div> 
-                                    <div class="btn-group dropend" v-show="courseCount >= 3">
-                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            --
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">A</a></li>
-                                            <li><a class="dropdown-item" href="#">B</a></li>
-                                            <li><a class="dropdown-item" href="#">C</a></li>                                    
-                                        </ul>   
-                                    </div> 
-                                    <div class="btn-group dropend" v-show="courseCount >= 4">
-                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            --
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">A</a></li>
-                                            <li><a class="dropdown-item" href="#">B</a></li>
-                                            <li><a class="dropdown-item" href="#">C</a></li>                                    
-                                        </ul>   
-                                    </div> 
-                                    <div class="btn-group dropend" v-show="courseCount >= 5">
-                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            --
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">A</a></li>
-                                            <li><a class="dropdown-item" href="#">B</a></li>
-                                            <li><a class="dropdown-item" href="#">C</a></li>                                    
-                                        </ul>   
-                                    </div> 
-                                    <div class="btn-group dropend" v-show="courseCount >= 6">
-                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            --
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">A</a></li>
-                                            <li><a class="dropdown-item" href="#">B</a></li>
-                                            <li><a class="dropdown-item" href="#">C</a></li>                                    
-                                        </ul>
-                                    </div> 
-                                </ul>
-                            </div>
-                            <button type="button" class="add-course" @:click="addCourse()">+ Add Course</button>            
+                    <div v-for="(semester, semesterIndex) in semesters" :key="semesterIndex" class="semester">
+                        <h1>Semester {{ semesterIndex + 1 }} </h1>
+                        <div class="semester-titles">
+                            <p class="course-title">Course Title</p>
+                            <p class="credit-title">Credits</p>
+                            <p class="grade-title">Grade</p>
                         </div>
-                        <p class="gpa-description">Hi</p>
+                        <div class="course-names" v-for="(course, courseIndex) in semester.courses" :key="courseIndex">
+                            <input type="text" v-bind="course.title" class="title-inputs" id="title-inputs"> 
+                            <input type="number" v-bind="course.credits" class="credit-inputs">
+                            <select v-model="course.grade" class="gpa-dropdown">
+                                <option value=""></option>
+                                <option v-for="(value, grade) in gradeScale" :key="grade" :value="value">
+                                    &nbsp {{ grade }}
+                                </option>
+                            </select>
+                        </div>
+                        <button type="button" class="add-course" @:click="addCourse(semesterIndex)">+ Add Course</button>            
                     </div>
-                    <button type="button" class="add-semester" @:click="semesterCount++"> + Add Semester</button> 
-                    <br>
-                    <button type="button" class="submit-semesters">Calculate</button>
-                    <button type="button" class="clear-page" @:click="clearPage()">Reset</button>
+                </div>
+                <button type="button" class="add-semester" @:click="addSemester()"> + Add Semester</button> 
+                <div class="calculate-reset">
+                    <button type="button" class="submit-semesters" @:click="calculateGPA()">Calculate</button>
+                    <button type="button" class="clear-page" @:click="clearPage()" id="clear-page">Reset</button>
                 </div>
             </div>
         </div>
@@ -188,20 +82,43 @@
         const app = Vue.createApp({
             data() {
                 return {
-                    courseCount: 0,
-                    semesters: []
-                }
+                    semesters: [
+                        { courses: this.defaultCourses() }
+                    ],
+                    gradeScale: { 'A': 4.0, 'A-': 3.7, 'B+': 3.5, 'B': 3.0, 'B-': 2.7, 
+                                  'C+': 2.5, 'C': 2.0, 'C-': 1.7, 'D+': 1.3, 'D': 1, 'D-': 0.7, 'F': 0.0 }
+                };
             },
             methods: {
-                addCourse() {
-                    this.courseCount++;
+                defaultCourses() {
+                    return Array.from({ length: 4 }, () => ({ title: '', credits: '', grade: '' }));
                 },
                 addSemester() {
-                    this.semesterCount++;
+                    this.semesters.push( { courses: this.defaultCourses() });
+                },
+                addCourse(semesterIndex) {
+                    this.semesters[semesterIndex].courses.push({ title: '', credits: '', grade: '' });
                 },
                 clearPage() {
-                    this.courseCount = 0;
-                    this.semesterCount = 0;
+                    this.semesters = [{ courses: this.defaultCourses() }];
+                }
+            },
+            computed: {
+                calculateGPA() {
+                    let totalCredits = 0;
+                    let totalGradePoints = 0;
+
+                    this.semesters.forEach(semester => {
+                        semester.courses.forEach(course => {
+                            if (course.credits && (course.grade in this.gradeScale)) {
+                                let credits = parseInt(course.credits);
+                                let gradePoints = this.gradeScale[course.grade] * credits;
+                                totalCredits += credits;
+                                totalGradePoints += gradePoints;
+                            }
+                        });
+                    });
+                    alert(totalCredits ? (totalGradePoints / totalCredits).toFixed(2) : 'Error: Unable to calculate GPA. Credits and Grade for each course should be filled out.');
                 }
             }
         })
