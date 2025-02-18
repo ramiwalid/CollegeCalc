@@ -60,11 +60,13 @@ body .container {
 /* Final Exam Grade Calculator */
 .title {
     font-size: 25px;
+    font-family: 'Raleway';
+    font-weight: bold;
 }
 .gradeCalc {
     background-color: white;
     width: 780px;
-    height: 300px;
+    height: 325px;
     margin: 20px auto;
     border-style: solid;
     border-radius: 5px;
@@ -73,7 +75,8 @@ body .container {
 }
 .bio {
     background-color: white;
-    padding: 10px;
+    padding: 10px 10px 5px 10px;
+    font-family: 'Raleway';
 }
 .current-grade {
     display: inline-flex;
@@ -127,6 +130,10 @@ body .container {
 .how-title {
     padding-top: 20px;
     font-weight: bold;
+    font-family: 'Raleway';
+}
+.how-bio {
+    font-family: 'Raleway';
 }
 
 
@@ -237,15 +244,21 @@ body .container {
 .gpaCalc-title {
     font-size: 25px;
     margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Raleway';
+}
+.gpa-calc-bio {
+    padding-bottom: 10px;
+    font-family: 'Raleway';
 }
 .semester {
-    max-width: 450px;
+    max-width: 500px;
     background-color: whitesmoke;
     border-style: solid;
     border-radius: 2px;
     border-color: black;
     border-width: 1px;
-    margin-bottom: 20px;
+    margin: 0 auto 10px;
 }
 .semester h1 {
     text-align: center;
@@ -256,79 +269,76 @@ body .container {
     height: 50px;
     padding-top: 10px;
 }
-.gpa-description {
-    max-width: 440px;
+.semester-titles {
+    display: inline-flex;
+}
+.course-title {
+    margin-left: 115px;
+    padding-right: 5px;
+}
+.credit-title {
+    margin-left: 70px;
+    padding-right: 5px;
+}
+.grade-title {
+    margin-left: 44px;
 }
 .course-names {
-    max-width: 150px;
     display: flex;
     gap: 20px;
-    padding: 10px;
-    margin-top: 20px;
+    margin-left: 80px;
+    padding-bottom: 10px;
 }
 .course-names input {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-radius: 2px;
     border-color: black;
 }
 .title-inputs {
     width: 150px;
-}
-.title-inputs p {
     text-align: center;
-    font-weight: bold;
-    width: 150px;
-}
-.title-inputs input {
-    max-width: 150px; 
 }
 .credit-inputs {
     max-width: 100px;
-}
-.credit-inputs p {
     text-align: center;
-    font-weight: bold;
-    margin-left: 12px;
-}
-.credit-inputs input {
-    width: 80px;
 }
 .grade-dropdown {
     width: 80px;
 }
-.grade-dropdown p {
-    font-weight: bold;
-    padding-left: 3px;
-}
-.grade-dropdown button {
-    background-color: white;
-    color: black;
-    display: block;
-    margin-bottom: 9px;
-    padding-left: 20px;
+.gpa-dropdown {
     height: 29px;
+    width: 55px;    
+}
+.gpa-placeholder {
+    text-align: center;
 }
 .add-course {
+    display: block;
+    margin: 0 auto 15px;
     border: none;
     background-color: whitesmoke;
     color: blue;
-    width: 100%;
-    margin-bottom: 10px;
+    width: fit-content;
 }
 .add-semester {
-    margin-left: 165px;
+    display: block;
     background-color: white;
     color: blue;
     border: none;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.calculate-reset {
+    display: block;
+    text-align: center;
 }
 .submit-semesters {
     background-color: green;
     color: white;
     height: 30px;
     width: 90px;
-    padding: 0px 5px 0px 5px;
     border-color: green;
-    margin: 5px 0px 0px 135px;
 }
 .clear-page {
     margin-left: 10px;
@@ -339,6 +349,8 @@ body .container {
 /* New Grade Calculator */
 .new-grade-title {
     font-size: 25px;
+    font-family: 'Raleway';
+    font-weight: bold;
 }
 
 .new-grade-calc {
@@ -354,6 +366,7 @@ body .container {
 .new-grade-bio {
     background-color: white;
     padding: 10px;
+    font-family: 'Raleway';
 }
 .new-current-grade {
     display: inline-flex;
@@ -396,6 +409,10 @@ body .container {
 .new-how-title {
     padding-top: 20px;
     font-weight: bold;
+    font-family: 'Raleway';
+}
+.new-how-bio {
+    font-family: 'Raleway';
 }
 
 .footer {
