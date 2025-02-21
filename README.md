@@ -4,12 +4,12 @@ CollegeCalc is a college assistance tool designed for students seeking insight o
 
 ## Description
 
-CollegeCalc currently features 3 different types of tools; 
-    - Final Exam Grade Calculator 
-    - Projected Grade Calculator 
+CollegeCalc currently features 3 different types of tools:  
+    - Final Exam Grade Calculator \
+    - Projected Grade Calculator \
     - GPA Calculator  
 
-All tools are intuitively designed with UX being the priority, boasting a simplistic design for user-accessibility. Many students find themselves stressing about what they score they must achieve on an exam or assignment or what their GPA for the semester may be, and this is the website to go to.
+Many students find themselves stressing about what they score they must achieve on an exam or assignment or what their GPA for the semester may be, and this is the website to go to.
 
 ## Usage
 
@@ -31,7 +31,7 @@ Input your current grade in the class, the grade you received (or think you'll r
 
 Clone the repository:
 ```bash
-git clone [text](https://github.com/ramiwalid/CollegeCalc)
+git clone https://github.com/ramiwalid/CollegeCalc
 cd CollegeCalc
 open home.html
 
