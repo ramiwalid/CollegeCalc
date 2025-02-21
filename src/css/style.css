@@ -1,0 +1,420 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #6C809A;
+}
+.navbar {
+    background: #6C809A;
+    height: 100px;
+}
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.collegecalc-logo {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 10px;
+    margin-right: 15px;
+}
+.dropdown {
+    margin-right: 970px;
+    margin-bottom: 10px;
+}
+.dropdown button {
+    background-color: #6C809A;
+    border: none;
+}
+.dropdown-item {
+    color: white;
+}
+.navbuttons {
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+.button-style {
+    background: #6C809A;
+    border: none;
+    color: white;
+}
+
+body .container {
+    max-width: none;
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+    width: 960px;
+    padding: 30px;
+}
+.container-content {
+    background-color: white;
+}
+
+
+/* Final Exam Grade Calculator */
+.title {
+    font-size: 25px;
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+.gradeCalc {
+    background-color: white;
+    width: 780px;
+    height: 325px;
+    margin: 20px auto;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 2px;
+}
+.bio {
+    background-color: white;
+    padding: 10px 10px 5px 10px;
+    font-family: 'Raleway';
+}
+.current-grade {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 130px;
+}
+.current-grade input {
+    height: 30px;
+}
+.current-grade p {
+    font-size: 19px;
+}
+.desired-grade {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 130px;
+}
+.desired-grade input {
+    height: 30px;
+}
+.desired-grade p {
+    font-size: 19px;
+    margin-left: 3px;
+}
+.grade-weight {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 130px;
+    margin-left: 20px;
+}
+.grade-weight input {
+    height: 30px;
+    margin-left: 7px;
+}
+.grade-weight p {
+    font-size: 19px;
+    margin-left: 0px 20px 0px 3px;
+}
+.calculate {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    padding: 0px 0px;
+    margin: 0 auto;
+    width: 100px;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+.how-title {
+    padding-top: 20px;
+    font-weight: bold;
+    font-family: 'Raleway';
+}
+.how-bio {
+    font-family: 'Raleway';
+}
+
+
+/* About page */
+.about {
+    display: inline-flex;
+}
+.text p {
+    width: 670px; 
+}
+.text h2 {
+    font-weight: bold;
+    font-size: 27px;
+}
+.text a {
+    color: blue;
+    text-decoration: none;
+}
+.titles {
+    width: max-content;
+    animation: shakeX;
+    animation-duration: 2s;
+}
+.about img {
+    border-style: solid;
+    border-width: 3px;
+    width: 200px;
+    margin-left: 30px;
+    max-height: max-content;
+}
+.image-section {
+    width: 200px;
+    display: block;
+}
+.linkedin {
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-left: 60px;
+}
+.linkedin a {
+    font-size: 20px;
+    color: blue;
+    font-family: 'Raleway';
+    text-decoration: none;
+}
+.linkedin i {
+    font-size: 23px;
+}
+.github {
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+.github a {
+    font-size: 20px;
+    color: blue;
+    font-family: 'Raleway';
+    text-decoration: none;
+}
+.github i {
+    font-size: 23px;
+}
+
+
+/* Home page */
+.home-title {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 80px;
+    font-family: 'Raleway';
+}
+.home-title-bio {
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    font-family: 'Raleway';
+}
+.tuition-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.tuition-info p {
+    margin: 80px 30px 0px 40px;
+    text-align: center;
+    width: 600px;
+    font-family: 'Raleway';
+    animation: backInRight;
+    animation-duration: 1s;
+}
+.tuition-info canvas {
+    max-width: 600px;
+    max-height: 300px;
+    margin-top: 20px;   
+    animation: backInUp;
+    animation-duration: 1s;
+}
+
+
+/* GPA Calculator */
+.gpaCalc {
+    display: inline-block;
+    width: 100%;
+}
+.gpaCalc-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Raleway';
+}
+.gpa-calc-bio {
+    padding-bottom: 10px;
+    font-family: 'Raleway';
+}
+.semester {
+    max-width: 500px;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: black;
+    border-width: 1px;
+    margin: 0 auto 10px;
+}
+.semester h1 {
+    text-align: center;
+    color: white;
+    font-style: oblique;
+    background-color:#6C809A;
+    font-size: 25px;
+    height: 50px;
+    padding-top: 10px;
+}
+.semester-titles {
+    display: inline-flex;
+}
+.course-title {
+    margin-left: 115px;
+    padding-right: 5px;
+}
+.credit-title {
+    margin-left: 70px;
+    padding-right: 5px;
+}
+.grade-title {
+    margin-left: 44px;
+}
+.course-names {
+    display: flex;
+    gap: 20px;
+    margin-left: 80px;
+    padding-bottom: 10px;
+}
+.course-names input {
+    margin-bottom: 5px;
+    border-radius: 2px;
+    border-color: black;
+}
+.title-inputs {
+    width: 150px;
+    text-align: center;
+}
+.credit-inputs {
+    max-width: 100px;
+    text-align: center;
+}
+.grade-dropdown {
+    width: 80px;
+}
+.gpa-dropdown {
+    height: 29px;
+    width: 55px;    
+}
+.gpa-placeholder {
+    text-align: center;
+}
+.add-course {
+    display: block;
+    margin: 0 auto 15px;
+    border: none;
+    background-color: whitesmoke;
+    color: blue;
+    width: fit-content;
+}
+.add-semester {
+    display: block;
+    background-color: white;
+    color: blue;
+    border: none;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.calculate-reset {
+    display: block;
+    text-align: center;
+}
+.submit-semesters {
+    background-color: green;
+    color: white;
+    height: 30px;
+    width: 90px;
+    border-color: green;
+}
+.clear-page {
+    margin-left: 10px;
+    width: 70px;
+    color: black;
+}
+
+/* New Grade Calculator */
+.new-grade-title {
+    font-size: 25px;
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+
+.new-grade-calc {
+    background-color: white;
+    width: 780px;
+    height: 300px;
+    margin: 20px auto;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 2px;
+}
+.new-grade-bio {
+    background-color: white;
+    padding: 10px;
+    font-family: 'Raleway';
+}
+.new-current-grade {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 130px;
+}
+.new-current-grade input {
+    height: 30px;
+    margin-left: 20px;
+}
+.new-current-grade p {
+    font-size: 19px;
+}
+.new-grade {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 150px;
+}
+.new-grade input {
+    height: 30px;
+    margin-left: 32px;
+}
+.new-grade p {
+    font-size: 19px;
+}
+
+.new-grade-weight {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 130px;
+}
+.new-grade-weight input {
+    height: 30px;
+    margin-left: 7px;
+}
+.new-grade-weight p {
+    font-size: 19px;
+    margin-left: 0px 20px 0px 3px;
+}
+.new-how-title {
+    padding-top: 20px;
+    font-weight: bold;
+    font-family: 'Raleway';
+}
+.new-how-bio {
+    font-family: 'Raleway';
+}
+
+.footer {
+    height: 150px;
+}

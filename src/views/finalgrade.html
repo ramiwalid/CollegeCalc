@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam Grade Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body style="background-color: #6C809A;">
+    <div id="app">
+        <div class="navbar">
+            <div class="navdiv">
+                <a href="home.html"><img src="imgs/collegecalclogo3.png" alt="CollegeCalc" class="collegecalc-logo"></a>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Tools</button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="location.href='finalgrade.html'">Final Exam Grade Calculator</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="location.href='gpacalc.html'">GPA Calculator</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="location.href='overallgrade.html'">Projected Grade Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="navbuttons">
+                        <button class="button-style" onclick="location.href='home.html'">Home</button>
+                        <button class="button-style" onclick="location.href='about.html'">About</button>
+                        <a href="mailto:rw324@njit.edu?subject=Inquiry&body=Hi,%20I%20have%20a%20question%20about..." class="button-style">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-content">
+                <h2 class="title">Final Exam Grade Calculator</h2>
+                <div class="gradeCalc">
+                    <p class="bio">This tool will determine the exam (or assignment) score you require to reach a desired grade (percentage).</p>
+                    <div class="current-grade">
+                        <p>Your current grade is: </p>
+                        <input id="current-grade" type="number" placeholder=" e.g. 92.3">
+                        <p>%</p>
+                    </div>
+                    <div class="desired-grade">
+                        <p>You want (at least) a: </p>
+                        <input id="desired-grade" type="number" placeholder=" e.g. 90.0">
+                        <p>%</p>
+                    </div>
+                    <div class="grade-weight">
+                        <p>Your final is worth: </p>
+                        <input id="grade-weight" type="number" placeholder=" e.g. 25">
+                        <p>%</p>
+                    </div>
+                    <button type="button" class="calculate" @:click="calcGrade" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right">Calculate</button>                     
+                </div>
+                <h5 class="how-title">How does the "Final Exam Grade Calculator" work?</h5>
+                <p class="how-bio">In most Universities/Institutions in the world, final grades are calculated based on 
+                    exams, quizzes, homework assignments, attendance, and projects. Each of these categories
+                    are assigned a weight. I.e. projects are worth 20%, exams are worth 16%, etc. With these grade weights,
+                    along with your current and desired grade, we can calculate the required grade to hit your desired grade based on
+                    whichever category you choose.
+                </p>
+                <h5 class="how-title">For more...</h5>
+                <p class="how-bio">
+                    Check out our other resources by navigating to the dropdown menu in the upper 
+                    left-hand corner or clicking one of the links below!
+                </p>
+                <a href="gpacalc.html" style="text-decoration: none;">GPA Calculator</a>
+                <br>
+                <a href="overallgrade.html" style="text-decoration: none;">Projected Grade Calculator</a>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    curr : 0,
+                    desired: 0,        
+                    result: 0
+                }
+            },
+            methods: {
+                calcGrade() {
+                    this.curr = parseInt(document.getElementById('current-grade').value);
+                    this.desired = parseInt(document.getElementById('desired-grade').value);
+                    this.weight = parseInt(document.getElementById('grade-weight').value) / 100;
+                    this.result = Math.round((this.desired - (this.curr * (1 - this.weight))) / (this.weight));
+                    if (this.result <= 100) {
+                        alert('You must score a ' + this.result + '% on your final to achieve a ' + this.desired + '%');
+                    }
+                    if (this.result > 100) {
+                        alert('You must score a ' + this.result + '% on your final, which is over 100%. It might not be possible to achieve a ' + this.desired + '%')
+                    }
+                    if (isNaN(this.result)) {
+                        alert('You must fill out all the required fields to obtain a required final grade.')
+                    }
+                }
+            }
+        })
+        app.mount('#app')
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="calc.js"></script>
+</body>
+</html>
