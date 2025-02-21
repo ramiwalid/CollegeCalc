@@ -53,8 +53,8 @@
                             <p class="grade-title">Grade</p>
                         </div>
                         <div class="course-names" v-for="(course, courseIndex) in semester.courses" :key="courseIndex">
-                            <input type="text" v-bind="course.title" class="title-inputs" id="title-inputs"> 
-                            <input type="number" v-bind="course.credits" class="credit-inputs">
+                            <input type="text" v-model="course.title" class="title-inputs" id="title-inputs"> 
+                            <input type="number" v-model="course.credits" class="credit-inputs">
                             <select v-model="course.grade" class="gpa-dropdown">
                                 <option value=""></option>
                                 <option v-for="(value, grade) in gradeScale" :key="grade" :value="value">
@@ -102,24 +102,33 @@
                 clearPage() {
                     this.semesters = [{ courses: this.defaultCourses() }];
                     location.reload();
-                }
-            },
-            computed: {
+                },
                 calculateGPA() {
                     let totalCredits = 0;
                     let totalGradePoints = 0;
 
-                    this.semesters.forEach(semester => {
-                        semester.courses.forEach(course => {
-                            if (course.credits && (course.grade in this.gradeScale)) {
-                                let credits = parseInt(course.credits);
-                                let gradePoints = this.gradeScale[course.grade] * credits;
+                    for (let i = 0; i < this.semesters.length; i++) {
+                        const courses = this.semesters[i].courses;
+                        console.log(`Semester ${i + 1}`)
+                        for (let j = 0; j < courses.length; j++) {
+                            const credits = parseFloat(courses[j].credits);
+                            const grade = courses[j].grade;
+                            console.log(`Course ${j + 1} - Credits: ${credits}, Grade: ${grade}`);
+                            
+                            if (!isNaN(credits)) {
                                 totalCredits += credits;
-                                totalGradePoints += gradePoints;
+                                totalGradePoints += (credits * grade);
+                            } else {
+                                console.warn(`Skipping invalid entry at Semester ${i + 1}, Course ${j + 1}`);
                             }
-                        });
-                    });
-                    alert(totalCredits ? (totalGradePoints / totalCredits).toFixed(2) : 'Error: Unable to calculate GPA. Credits and Grade for each course should be filled out.');
+                        }
+                    }
+                    if (totalCredits === 0) {
+                        alert('Error: No valid data was found.')
+                    } else {
+                        const gpa = (totalGradePoints / totalCredits).toFixed(2);
+                        alert(`GPA: ${gpa}`);
+                    }
                 }
             }
         })
