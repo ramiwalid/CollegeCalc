@@ -113,7 +113,8 @@
                         for (let j = 0; j < courses.length; j++) {
                             const credits = parseFloat(courses[j].credits);
                             const grade = courses[j].grade;
-                            console.log(`Course ${j + 1} - Credits: ${credits}, Grade: ${grade}`);
+                            const title = courses[j].title;
+                            console.log(`${title ? title : 'Course ' + (j + 1)} - Credits: ${credits}, Grade: ${grade}`);
                             
                             if (!isNaN(credits)) {
                                 totalCredits += credits;
@@ -124,7 +125,7 @@
                         }
                     }
                     if (totalCredits === 0) {
-                        alert('Error: No valid data was found.')
+                        alert('Error: Missing fields. Input data for calculation.')
                     } else {
                         const gpa = (totalGradePoints / totalCredits).toFixed(2);
                         alert(`GPA: ${gpa}`);
