@@ -4,11 +4,16 @@ CollegeCalc is a college assistance tool designed for students seeking insight o
 
 ## Description
 
-CollegeCalc currently features 3 different types of tools; Final Exam Grade Calculator, Projected Grade Calculator, and a GPA Calculator. All tools are intuitively designed with UX being the priority, boasting a simplistic design for user-accessibility. Many students find themselves stressing about what they score they must achieve on an exam or assignment or what their GPA for the semester may be, and this is the website to go to.
+CollegeCalc currently features 3 different types of tools; 
+    - Final Exam Grade Calculator 
+    - Projected Grade Calculator 
+    - GPA Calculator  
+
+All tools are intuitively designed with UX being the priority, boasting a simplistic design for user-accessibility. Many students find themselves stressing about what they score they must achieve on an exam or assignment or what their GPA for the semester may be, and this is the website to go to.
 
 ## Usage
 
-![alt text](/CollegeCalc/imgs/finalexamtut.png)
+![screenshot](imgs/finalexamtut.png)
 Input your current grade in the class, the grade you wish to achieve, and the weight of your exam (is the exam worth 15%, 20%, 50% of your grade), and the calculator will output the grade you must score on the final to achieve the grade you desire.
 
 ![alt text](/CollegeCalc/imgs/gpacalctut.png)
